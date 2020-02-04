@@ -102,7 +102,7 @@
 		    projectIdtemp;
 		
 		
-		// Make url
+		// CAS 1: LANDING WITH URL
 		if ( url.split('/landing-ayomi/').length > 1 ) {
 		    url = url.split('/landing-ayomi/').pop();
 		    url = url.replace('forms.zohopublic.eu/sofianebelgadi/form/InscriptionEvnement/formperma/FSfjOlbDhIGYL_ZMK9cDm8q-LBEuLWFMpNB-SJzae0w','ayomi.fr/cofunding/event/confirmation/');
@@ -125,7 +125,9 @@
 			}
 		    }
 		    console.log('My Url : ' + url);	
-
+		} else if ( url.split('/url/projet/fonction/').length > 1 ) {
+		// CAS 2: projectId
+			
 		} else {
 		        while(match = regex.exec(url)) {
 			    params[match[1]] = match[2];
